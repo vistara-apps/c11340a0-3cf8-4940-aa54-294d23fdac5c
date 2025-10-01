@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Finance Theme - Wall Street meets Crypto */
+  --color-bg: hsl(220, 25%, 8%);
+  --color-fg: hsl(220, 10%, 95%);
+  --color-accent: hsl(45, 100%, 50%);
+  --color-border: hsl(220, 20%, 20%);
+  --color-surface: hsl(220, 22%, 12%);
+  --color-primary: hsl(210, 100%, 50%);
+  --color-success: hsl(140, 65%, 50%);
+  --color-warning: hsl(30, 95%, 60%);
+  --color-danger: hsl(0, 85%, 60%);
+  --color-text-muted: hsl(220, 10%, 65%);
+  
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+  
+  --shadow-card: 0 4px 16px hsla(220, 25%, 0%, 0.4);
+  --shadow-elevated: 0 12px 32px hsla(220, 25%, 0%, 0.6);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-bg text-fg;
+    font-feature-settings: "rlig" 1, "calt" 1;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@layer utilities {
+  .glass-card {
+    @apply bg-surface border rounded-lg;
+    border-color: var(--color-border);
+    backdrop-filter: blur(10px);
+  }
+  
+  .catalyst-card-glow {
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.15);
+  }
+  
+  .pulse-gradient {
+    background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-primary) 100%);
+  }
+  
+  .impact-high {
+    @apply text-danger;
+  }
+  
+  .impact-medium {
+    @apply text-warning;
+  }
+  
+  .impact-low {
+    @apply text-success;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-accent text-bg px-6 py-3 rounded-lg font-semibold hover:opacity-90 transition-all duration-200 shadow-card hover:shadow-elevated;
+  }
+  
+  .btn-secondary {
+    @apply bg-surface text-fg px-6 py-3 rounded-lg font-medium border hover:bg-opacity-80 transition-all duration-200;
+    border-color: var(--color-border);
+  }
+  
+  .metric-card {
+    @apply glass-card p-4 hover:bg-opacity-80 transition-all duration-200;
+  }
+  
+  .catalyst-card {
+    @apply glass-card p-4 hover:catalyst-card-glow transition-all duration-300 cursor-pointer;
+  }
+  
+  .pulse-feed-item {
+    @apply glass-card p-4 mb-3 hover:bg-opacity-80 transition-all duration-200;
+  }
+}
