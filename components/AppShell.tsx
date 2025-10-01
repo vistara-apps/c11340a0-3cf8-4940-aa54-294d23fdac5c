@@ -4,6 +4,7 @@ import { ReactNode } from 'react';
 import { TrendingUp, Bell, User, Home, BarChart3 } from 'lucide-react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { WalletConnect } from './WalletConnect';
 
 interface AppShellProps {
   children: ReactNode;
@@ -31,9 +32,7 @@ export function AppShell({ children }: AppShellProps) {
             </div>
             <h1 className="text-xl font-bold">PulsePort</h1>
           </div>
-          <button className="btn-primary text-sm py-2 px-4">
-            Connect Wallet
-          </button>
+          <WalletConnect />
         </div>
       </header>
 
