@@ -1,0 +1,30 @@
+{
+  "accountAssociation": {
+    "header": "",
+    "payload": "",
+    "signature": ""
+  },
+  "frame": {
+    "version": "1",
+    "name": "PulsePort",
+    "subtitle": "Built with Zara",
+    "description": "PulsePort is a Base Mini App built with Zara.",
+    "iconUrl": "https://0co.to/images/zara-2.png",
+    "homeUrl": "https://c11340a03cf84940aa54294d23fdac5c-f29i.vercel.app",
+    "splashImageUrl": "https://c11340a03cf84940aa54294d23fdac5c-f29i.vercel.app/splash.png",
+    "splashBackgroundColor": "#000000",
+    "heroImageUrl": "https://c11340a03cf84940aa54294d23fdac5c-f29i.vercel.app/image.png",
+    "tagline": "PulsePort",
+    "screenshotUrls": [
+      "https://c11340a03cf84940aa54294d23fdac5c-f29i.vercel.app/screenshot.png",
+      "https://c11340a03cf84940aa54294d23fdac5c-f29i.vercel.app/screenshot.png"
+    ],
+    "primaryCategory": "social",
+    "tags": [
+      "base",
+      "miniapp",
+      "onchainkit"
+    ],
+    "webhookUrl": "https://c11340a03cf84940aa54294d23fdac5c-f29i.vercel.app/api/webhook"
+  }
+}
